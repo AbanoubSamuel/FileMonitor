@@ -8,7 +8,7 @@ public class FileMonitor {
 
     public static void main(String[] args) {
         SpringApplication.run(FileMonitor.class, args);
-        System.out.println("Hello");
+        System.out.println("Spring DevTools Test...");
     }
 
 }
