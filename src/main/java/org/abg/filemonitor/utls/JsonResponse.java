@@ -1,4 +1,4 @@
-package org.abg.filemaven.utls;
+package org.abg.filemonitor.utls;
 
 import jakarta.annotation.Nullable;
 import lombok.Getter;

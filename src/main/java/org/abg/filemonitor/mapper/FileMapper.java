@@ -1,7 +1,7 @@
-package org.abg.filemaven.mapper;
+package org.abg.filemonitor.mapper;
 
-import org.abg.filemaven.dto.FileDto;
-import org.abg.filemaven.entity.File;
+import org.abg.filemonitor.dto.FileDto;
+import org.abg.filemonitor.entity.File;
 import org.mapstruct.*;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING)

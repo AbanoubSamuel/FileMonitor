@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.abg</groupId>
-    <artifactId>FileMaven</artifactId>
+    <artifactId>FileMonitor</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>FileMaven</name>
     <description>FileMaven</description>

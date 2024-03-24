@@ -1,6 +1,6 @@
-package org.abg.filemaven.repository;
+package org.abg.filemonitor.repository;
 
-import org.abg.filemaven.entity.File;
+import org.abg.filemonitor.entity.File;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

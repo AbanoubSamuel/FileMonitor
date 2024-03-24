@@ -1,11 +1,11 @@
-package org.abg.filemaven.dto;
+package org.abg.filemonitor.dto;
 
 import lombok.*;
 
 import java.io.Serializable;
 
 /**
- * DTO for {@link org.abg.filemaven.entity.File}
+ * DTO for {@link org.abg.filemonitor.entity.File}
  */
 
 @Getter

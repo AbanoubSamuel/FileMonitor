@@ -1,4 +1,4 @@
-package org.abg.filemaven.entity;
+package org.abg.filemonitor.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
