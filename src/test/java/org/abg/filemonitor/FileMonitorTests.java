@@ -1,10 +1,10 @@
-package org.abg.filemaven;
+package org.abg.filemonitor;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FileMavenApplicationTests {
+class FileMonitorTests {
     @Test
     void contextLoads() {
     }

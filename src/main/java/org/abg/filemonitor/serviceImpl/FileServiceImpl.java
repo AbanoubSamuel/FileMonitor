@@ -1,8 +1,8 @@
-package org.abg.filemaven.serviceImpl;
+package org.abg.filemonitor.serviceImpl;
 
 
-import org.abg.filemaven.entity.File;
-import org.abg.filemaven.service.FileService;
+import org.abg.filemonitor.entity.File;
+import org.abg.filemonitor.service.FileService;
 import org.springframework.stereotype.Service;
 
 @Service

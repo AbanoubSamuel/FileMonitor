@@ -1,11 +1,11 @@
-package org.abg.filemaven.controller;
+package org.abg.filemonitor.controller;
 
 import jakarta.validation.Valid;
-import org.abg.filemaven.dto.FileDto;
-import org.abg.filemaven.entity.File;
-import org.abg.filemaven.mapper.FileMapper;
-import org.abg.filemaven.repository.FileRepository;
-import org.abg.filemaven.utls.JsonResponse;
+import org.abg.filemonitor.dto.FileDto;
+import org.abg.filemonitor.entity.File;
+import org.abg.filemonitor.mapper.FileMapper;
+import org.abg.filemonitor.repository.FileRepository;
+import org.abg.filemonitor.utls.JsonResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
