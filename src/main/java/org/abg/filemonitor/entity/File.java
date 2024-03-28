@@ -17,4 +17,6 @@ public class File {
     private String name;
     @Column(name = "last_updated", nullable = false)
     private String lastUpdated;
+    @Column(name = "status", nullable = false)
+    private String status;
 }

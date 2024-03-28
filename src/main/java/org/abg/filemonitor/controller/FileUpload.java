@@ -6,6 +6,8 @@ import org.abg.filemonitor.entity.File;
 import org.abg.filemonitor.mapper.FileMapper;
 import org.abg.filemonitor.repository.FileRepository;
 import org.abg.filemonitor.utls.JsonResponse;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
