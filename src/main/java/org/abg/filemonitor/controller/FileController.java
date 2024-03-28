@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/files")
-public class FileUpload {
+public class FileController {
     @Autowired
     private FileMapper fileMapper;
     @Autowired
