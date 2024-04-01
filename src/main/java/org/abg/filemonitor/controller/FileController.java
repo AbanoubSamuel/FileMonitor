@@ -30,7 +30,7 @@ public class FileController {
         fileRepository.saveAndFlush(file);
         FileDto fileDto1 = fileMapper.toDto(file);
         JsonResponse<FileDto> jsonResponse = new JsonResponse<>();
-        jsonResponse.setStatus(true);
+        jsonResponse.setStatus("Success");
         jsonResponse.setMessage("File uploaded successfully");
         jsonResponse.setData(fileDto1);
         return new ResponseEntity<>(jsonResponse, HttpStatus.ACCEPTED);

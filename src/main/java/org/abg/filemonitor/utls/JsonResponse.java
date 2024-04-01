@@ -1,16 +1,17 @@
 package org.abg.filemonitor.utls;
 
 import jakarta.annotation.Nullable;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
-public class JsonResponse<T> {
-    private boolean status;
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public final class JsonResponse<T> {
+    private String status;
+    private int statusCode;
     private String message;
     @Nullable
     private T data;
-    private long pageCount;
-    private long totalCount;
 }
