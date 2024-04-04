@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Collections;
 
 @Configuration
-public class HttpImpl implements HttpService {
+public class HttpServiceImpl implements HttpService {
     @Bean
     @Override
     public RestTemplate restTemplate() {
