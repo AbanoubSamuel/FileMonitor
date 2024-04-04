@@ -1,5 +1,6 @@
 package org.abg.filemonitor;
 
+import org.abg.filemonitor.utls.FileSender;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,7 @@ import java.io.IOException;
 import java.nio.file.*;
 
 import static org.abg.filemonitor.utls.Constant.SOURCE_FOLDER;
-import static org.abg.filemonitor.utls.FileUtils.zipFile;
+import static org.abg.filemonitor.utls.FileZipper.zipFile;
 
 @SpringBootApplication
 public class FileMonitor {
@@ -33,6 +34,8 @@ public class FileMonitor {
                 if (event.kind() == StandardWatchEventKinds.ENTRY_CREATE) {
                     Path filePath = path.resolve((Path) event.context());
                     zipFile(filePath);
+                    FileSender.sendFile(filePath);
+
                 }
             }
             key.reset();
