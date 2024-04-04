@@ -6,15 +6,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 import java.nio.file.*;
 
+import static org.abg.filemonitor.utls.Constant.SOURCE_FOLDER;
+import static org.abg.filemonitor.utls.FileUtils.zipFile;
+
 @SpringBootApplication
 public class FileMonitor {
     public static void main(String[] args) throws IOException, InterruptedException {
         SpringApplication.run(FileMonitor.class, args);
         WatchService watchService = FileSystems.getDefault()
                 .newWatchService();
-        String directoryPathStr = "/home/ilinux/WorkSpace/ABG/FileMonitor/src/main/resources/uploads";
-
-        Path path = Paths.get(directoryPathStr);
+        Path path = Paths.get(SOURCE_FOLDER);
 
         path.register(
                 watchService,
@@ -29,6 +30,10 @@ public class FileMonitor {
                 System.out.println(
                         "Event kind:" + event.kind()
                                 + ". File affected: " + event.context() + ".");
+                if (event.kind() == StandardWatchEventKinds.ENTRY_CREATE) {
+                    Path filePath = path.resolve((Path) event.context());
+                    zipFile(filePath);
+                }
             }
             key.reset();
         }
