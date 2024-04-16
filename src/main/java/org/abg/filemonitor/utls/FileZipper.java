@@ -11,10 +11,17 @@ import static org.abg.filemonitor.utls.Constant.DESTINATION_FOLDER;
 
 public class FileZipper {
     public static Path zipFile(Path filePath) throws IOException {
-        Path zipFilePath = Paths.get(DESTINATION_FOLDER, filePath.getFileName().toString() + ".zip");
+        String fileName = filePath.getFileName().toString();
+
+        // Check if the file has a .done extension
+
+        // Remove the .done extension
+        String zipFileName = fileName.substring(0, fileName.length() - 5);
+
+        Path zipFilePath = Paths.get(DESTINATION_FOLDER, zipFileName + ".zip");
 
         if (Files.exists(zipFilePath)) {
-            System.out.println("Zip file already exists for: " + filePath.getFileName());
+            System.out.println("Zip file already exists for: " + fileName);
             return null;
         }
 
@@ -25,7 +32,7 @@ public class FileZipper {
                 ZipOutputStream zipOut = new ZipOutputStream(fos);
                 FileInputStream fis = new FileInputStream(filePath.toFile())
         ) {
-            ZipEntry zipEntry = new ZipEntry(filePath.getFileName().toString());
+            ZipEntry zipEntry = new ZipEntry(zipFileName);
             zipOut.putNextEntry(zipEntry);
 
             byte[] bytes = new byte[1024];
